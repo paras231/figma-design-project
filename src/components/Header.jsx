@@ -4,8 +4,16 @@ import logo from "../assets/logo.png";
 
 const HeaderContainer = styled.div`
   display: flex;
-
   padding-top: 45px;
+  @media(min-width:320px) and (max-width: 420px) {
+   display: none;
+  }
+  @media(min-width:421px) and (max-width: 480px) {
+   display: none;
+  }
+  @media(min-width:481px) and (max-width: 560px) {
+   display: none;
+  }
 `;
 const LeftLink = styled.div`
   display: flex;
