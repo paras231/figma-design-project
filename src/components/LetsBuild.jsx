@@ -3,14 +3,34 @@ import blur from "../assets/blur.png";
 import styled from "styled-components";
 import illustration from "../assets/illustration.png";
 import ellipse1 from "../assets/ellipse1.png";
+import google from "../assets/google.png";
+import slack from "../assets/slack.png";
+import shopify from "../assets/shopify.png";
+import dropbox from "../assets/dropbox.png";
+
 
 const LeftContent = styled.div`
-  /* background-image: url(${blur});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
+ 
+ @media (min-width: 320px) and (max-width: 374px) {
+    padding-left: 5%;
+    height: 100%;
+    display: grid;
+    width: 40%;
+  }
 
   @media (min-width: 375px) and (max-width: 420px) {
+    padding-left: 10%;
+    height: 100%;
+    display: grid;
+    width: 60%;
+  }
+  @media (min-width: 421px) and (max-width: 480px) {
+    padding-left: 10%;
+    height: 100%;
+    display: grid;
+    width: 60%;
+  }
+  @media (min-width: 481px) and (max-width: 560px) {
     padding-left: 10%;
     height: 100%;
     display: grid;
@@ -114,6 +134,11 @@ const Button = styled.button`
 const InputDiv = styled.div`
   margin-top: 5vh;
   display: flex;
+  @media (min-width: 320px) and (max-width: 375px) {
+    margin-top: 5vh;
+  display: flex;
+ 
+  }
 `;
 const Input = styled.input`
   width: 30vw;
@@ -128,6 +153,15 @@ const Input = styled.input`
   &:focus {
     outline: none;
   }
+  @media (min-width: 320px) and (max-width: 375px) {
+    width: 47vw;
+  }
+  @media (min-width: 376px) and (max-width: 420px) {
+    width: 47vw;
+  }
+  @media (min-width: 421px) and (max-width: 480px) {
+    width: 47vw;
+  }
 `;
 
 const RightImage = styled.img`
@@ -136,7 +170,21 @@ const RightImage = styled.img`
   margin-left: 17%;
   margin-top: -13%;
 
+  @media (min-width: 320px) and (max-width: 375px) {
+    width: 60vw;
+    height: 100%;
+    margin-left: 17%;
+    margin-top: 10vh;
+  }
+
   @media (min-width: 375px) and (max-width: 420px) {
+    width: 64vw;
+    height: 100%;
+    margin-left: 17%;
+    margin-top: 10vh;
+  }
+
+  @media (min-width: 421px) and (max-width: 480px) {
     width: 64vw;
     height: 100%;
     margin-left: 17%;
@@ -191,15 +239,49 @@ const AvatarsContent = styled.div`
   display: flex;
   margin-top: 10vh;
   padding-left: 2%;
+
+  @media (min-width: 320px) and (max-width: 375px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 0%; */
+  }
+  @media (min-width: 376px) and (max-width: 420px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 0%; */
+  }
+  @media (min-width: 421px) and (max-width: 480px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 0%; */
+  }
 `;
 const Ellipse = styled.img`
   margin-left: -13px;
 `;
+
+const LogoDiv = styled.div`
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+margin-top: 10vh;
+
+`
+
 const MainContent = styled.div`
   display: flex;
   margin-top: 10vh;
+  @media (min-width: 320px) and (max-width: 375px) {
+    display:grid
+  }
   @media (min-width: 376px) and (max-width: 420px) {
-    flex-direction: column;
+    display:grid
+  }
+  @media (min-width: 421px) and (max-width: 480px) {
+    display:grid
   }
 `;
 const LetsBuild = () => {
@@ -207,7 +289,7 @@ const LetsBuild = () => {
     <>
       <MainContent>
         <LeftContent>
-          <Text>Let’s Build Something amazing with GPT-3 OpenA</Text>
+          <Text>Let’s Build Something amazing with GPT-3 OpenAI</Text>
           <Text2>
             Yet bed any for travelling assistance indulgence unpleasing. Not
             thoughts all exercise blessing. Indulgence way everything joy
@@ -231,6 +313,13 @@ const LetsBuild = () => {
           <RightImage src={illustration} />
         </RightContent>
       </MainContent>
+
+{/* <LogoDiv>
+  <img src={google}/>
+  <img  src={slack}/>
+  <img   scr={dropbox}/>
+  <img   scr={shopify}/>
+</LogoDiv> */}
     </>
   );
 };
